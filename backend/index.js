@@ -5,8 +5,12 @@ import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
 import userRoute from "./routes/user.routes.js";
 import companyRoute from "./routes/company.routes.js"
-dotenv.config({});
+
 import jobRoute from "./routes/job.route.js"
+import applicationRoute from "./routes/application.routes.js"
+
+
+dotenv.config({});
 const app = express();
 
 
@@ -39,7 +43,7 @@ app.use("/api/v1/user",userRoute);
 //"http://localhost:8000/api/v1/user/register"
 app.use("/api/v1/company",companyRoute)
 app.use("/api/v1/job",jobRoute)
-
+app.use("/api/v1/application",applicationRoute)
 app.listen(PORT, () => {
   connectDB();
   console.log(`Server running on port : ${PORT}`);
