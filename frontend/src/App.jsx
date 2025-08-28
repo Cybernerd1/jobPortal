@@ -1,13 +1,10 @@
-import React from 'react'
-import './App.css'
+import Navbar from "./components/shared/Navbar";
 
-function App() {
-  
+export default function App() {
   return (
     <>
-      <h1>Let's build job portal</h1>
+      <Navbar />
     </>
+
   )
 }
-
-export default App
